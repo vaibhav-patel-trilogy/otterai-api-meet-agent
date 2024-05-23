@@ -161,7 +161,7 @@ class OtterAI:
         response = self._session.get(finish_speech_upload, params=payload)
 
         return self._handle_response(response)
-# AI-GEN START - Cursor
+
     def add_to_meet(self, meeting_url):
         # API URL
         add_meet_url = OtterAI.API_BASE_URL + 'manage_virtual_assistant'
@@ -182,7 +182,7 @@ class OtterAI:
         response = self._session.post(add_meet_url, data=multipart_data,
             headers={'Content-Type': multipart_data.content_type, 'Referer': 'https://otter.ai/home', 'x-csrftoken': self._cookies['csrftoken']})
         return response.json()
-# AI-GEN END
+
     def move_to_trash_bin(self, speech_id):
         # API URL
         move_to_trash_bin_url = OtterAI.API_BASE_URL + 'move_to_trash_bin'

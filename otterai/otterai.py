@@ -172,7 +172,7 @@ class OtterAI:
         # First grab upload params (aws data)
         payload = {'userid': self._userid}
         fields = {}
-        fields['conf_url'] = 
+        fields['conf_url'] = meeting_url
         fields['meeting_len'] = '14400'
         fields['action'] = 'start'
 
